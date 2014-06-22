@@ -1,5 +1,6 @@
 #!/bin/sh -x
 
+echo "Create supermin appliance."
 supermin --prepare yum -o supermin.d
 supermin --build --format chroot supermin.d -o appliance.d
 
