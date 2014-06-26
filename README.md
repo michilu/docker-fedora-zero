@@ -13,7 +13,7 @@ Usage
 
 To get the image michilu/fedora-zero:
 
-    docker pull michilu/fedora-zero
+    $ docker pull michilu/fedora-zero
 
 or, use in the Dockerfile:
 
@@ -24,12 +24,15 @@ Create docker image
 
 To create docker image, first run on the docker container:
 
-    docker run michilu/fedora-supermin curl -L https://github.com/MiCHiLU/docker-fedora-zero/raw/master/buildcontainers.sh | sh
+    $ docker run michilu/fedora-supermin
 
 then, get `fedora-zero.tar.xz` file from the docker container:
 
-    docker cp <CONTAINER ID>:/fedora-zero.tar.xz docker-fedora-zero
+    $ docker cp <CONTAINER ID>:/fedora-zero.tar.xz .
 
 then, build docker image:
 
-    docker build docker-fedora-zero
+    $ cat fedora-zero.tar.xz | docker import -
+    $ docker images
+    REPOSITORY    TAG       IMAGE ID        CREATED          VIRTUAL SIZE
+    <none>        <none>    c4e626cd398a    0 seconds ago    120.5 MB

@@ -6,7 +6,6 @@ supermin --build --format chroot supermin.d -o appliance.d
 
 cd /appliance.d
 
-
 echo "Minimizing locale-archive."
 # this is really kludgy and will be fixed with a better way of building
 # these containers
@@ -20,6 +19,6 @@ mv tmp/en_US usr/share/i18n/locales/
 echo "Cleaning old log."
 echo -n "" > var/log/lastlog
 
-
+echo "Archiving and compression."
 tar --create . |xz --best > /fedora-zero.tar.xz
 #tar --create . |xz --best --memlimit-compress=70% > /fedora-zero.tar.xz
