@@ -1,5 +1,5 @@
 michilu/fedora-zero
-===================
+---
 
 Minimum Fedora docker image that nothing install
 
@@ -8,8 +8,7 @@ Minimum Fedora docker image that nothing install
 * Based on Fedora rawhide
 * Made by supermin on docker on CoreOS
 
-Usage
------
+# Usage
 
 To get the image michilu/fedora-zero:
 
@@ -19,8 +18,7 @@ or, use in the Dockerfile:
 
     FROM michilu/fedora-zero
 
-Create docker image
--------------------
+# Create docker image
 
 To create docker image, first run on the docker container:
 
