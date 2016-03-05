@@ -18,6 +18,12 @@ or, use in the Dockerfile:
 
     FROM michilu/fedora-zero
 
+## You must be install dnf
+
+Now, the `yum` was departure, so install the `dnf` package on docker container, first:
+
+    $ yum install dnf
+
 # Create docker image
 
 To create docker image, first run on the docker container:
